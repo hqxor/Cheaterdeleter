@@ -1,0 +1,44 @@
+# License system
+verify:
+
+  # Your api key here
+  api: "4994153f292d7804c4173ab06515bca924659c4c"
+
+  # Your license key here
+  license: ""
+
+# Violation logging
+logging:
+
+  # Should Intect send you ingame a message if a new update is available?
+  alert-updates: true
+
+sampler:
+  # How long does it take to generate a vector (milliseconds)
+  duration_to_generate_a_vector: 6000
+
+  # How many vectors are needed to constitute a category
+  vector_per_category: 10
+
+# Parameters about testing (classification)
+test:
+  # Default duration used when '/slr test' is called without giving duration (seconds)
+  default_duration: 10
+  num_samples: 50
+  likelihood: 0.3
+  threshold: 2
+
+# Learning parameters of the built-in LVQ Neural Network
+LVQNN_parameters:
+
+  # Initial step size. Default: 0.5
+  step_size: 0.5
+
+  # Initial step decrease rate. The step size will *= step_dec_rate after each epoch. Default: 0.95
+  step_dec_rate: 0.95
+
+  # Minimum step size. The step size ceases to decrease if it is lower than this value Default: 0.01
+  min_step_size: 0.01
+
+LVQNN_train:
+  epoch: 100
